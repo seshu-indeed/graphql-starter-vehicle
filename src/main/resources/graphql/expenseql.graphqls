@@ -1,11 +1,3 @@
-type Vehicle {
-    id: ID!,
-    type: String,
-    modelCode: String,
-    brandName: String,
-    launchDate: String
-}
-
 type Expense {
     amount: Int,
     categoryCode: String,
@@ -13,18 +5,15 @@ type Expense {
 
 type Category {
     code: String,
-    parentCode: String,
+    description: String,
 }
 
 type Query {
-    vehicles(count: Int):[Vehicle]
-    vehicle(id: ID):Vehicle
     expenses:[Expense]
     categories: [Category]
 }
 
 type Mutation {
-    createVehicle(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicle
     createExpense(amount: Int, categoryCode: String!):Expense
     createCategory(code: String!, description: String!):Category
 }
