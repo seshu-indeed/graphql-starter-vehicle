@@ -30,11 +30,11 @@ public class VehicleMutation implements GraphQLMutationResolver {
         this.expenseService = expenseService;
     }
 
-    public Category createCategory(final String code, final String description) {
-        return this.expenseService.createCategory(code, description);
+    public Category createCategory(final String code, final String definition) {
+        return this.expenseService.createCategory(code, definition);
     }
 
-    public Expense createVehicle(final int amount, final String categoryCode) {
+    public Expense createExpense(final int amount, final String categoryCode) {
         return this.expenseService.createExpense(amount, categoryCode);
     }
 }

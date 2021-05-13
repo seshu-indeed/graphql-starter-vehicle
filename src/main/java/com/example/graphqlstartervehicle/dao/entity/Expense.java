@@ -19,4 +19,8 @@ public class Expense extends ActionableEntity {
 
     Category category;
 
+    public String categoryCode() {
+        return category.getCode();
+    }
+
 }

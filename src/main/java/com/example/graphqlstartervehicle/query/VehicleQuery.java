@@ -22,7 +22,7 @@ public class VehicleQuery implements GraphQLQueryResolver {
 //    }
 
     private final VehicleService vehicleService;
-    private ExpenseService expenseService;
+    private final ExpenseService expenseService;
 
     public VehicleQuery(VehicleService vehicleService, ExpenseService expenseService) {
         this.vehicleService = vehicleService;

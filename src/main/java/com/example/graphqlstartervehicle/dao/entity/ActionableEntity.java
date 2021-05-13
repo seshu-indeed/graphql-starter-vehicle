@@ -1,10 +1,11 @@
 package com.example.graphqlstartervehicle.dao.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ActionableEntity implements CanPerformActions {
 
-    protected List<Action> actions;
+    protected List<Action> actions = new ArrayList<>();
 
     @Override
     public List<Action> getActions() {

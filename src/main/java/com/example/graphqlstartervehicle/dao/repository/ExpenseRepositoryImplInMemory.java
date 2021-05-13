@@ -7,16 +7,17 @@ import com.example.graphqlstartervehicle.dao.entity.Expense;
 import lombok.Synchronized;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Component
 public class ExpenseRepositoryImplInMemory implements ExpenseRepository {
 
-    private List<Expense> expenses;
+    private List<Expense> expenses = new ArrayList<>();
     private static long nextExpenseId=1;
 
-    private List<Category> categories;
+    private List<Category> categories = new ArrayList<>();
     private static long nextCategoryId=1;
 
     @Override
